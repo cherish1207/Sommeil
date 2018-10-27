@@ -27,9 +27,9 @@ def tts(text):
     response = client.synthesize_speech(input_text, voice, audio_config)
 
     # The response's audio_content is binary.
-    with open('result.wav', 'wb') as out:
+    with open('output.wav', 'wb') as out:
         out.write(response.audio_content)
-        print('"result.wav"파일로 저장되었습니다.')
+        print('"output.wav"파일로 저장되었습니다.')
 
 
 # 현재 디렉토리에 있는 .raw 확장자를 가진 파일을 입력받고
@@ -63,7 +63,7 @@ def sst(audioFile):
     '''
 
 if __name__ == "__main__":
-    #tts('현재 날씨를 알려드리겠습니다.')
+    tts('듣고있어요')
     responses = sst('out.raw')
     for response in responses:
         # response.alternatives[0].transcript 에 우리가 원하는 sst의 결과가 들어있다

@@ -1,7 +1,6 @@
 #1. 공공데이터 이용하기
 import requests
 from bs4 import BeautifulSoup
-from IO import  recordMic, playAudio
 
 
 def find_weather():
@@ -19,4 +18,3 @@ def find_weather():
     return(data[0]+dat[1])
 
 print(find_weather())
-recordMic("input.raw")
