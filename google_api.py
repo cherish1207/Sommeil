@@ -31,7 +31,6 @@ def tts(text):
         out.write(response.audio_content)
         print('"output.wav"파일로 저장되었습니다.')
 
-
 # 현재 디렉토리에 있는 .raw 확장자를 가진 파일을 입력받고
 # 결과를 가져온다. 아직 리턴값은 정하지 않음
 def sst(audioFile):
@@ -64,7 +63,3 @@ def sst(audioFile):
 
 if __name__ == "__main__":
     tts('듣고있어요')
-    responses = sst('out.raw')
-    for response in responses:
-        # response.alternatives[0].transcript 에 우리가 원하는 sst의 결과가 들어있다
-        print("명령: " + response.alternatives[0].transcript)
