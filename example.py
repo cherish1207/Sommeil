@@ -1,6 +1,8 @@
 #1. 공공데이터 이용하기
 import requests
 from bs4 import BeautifulSoup
+from IO import  recordMic, playAudio
+
 
 def find_weather():
     r = requests.get("http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108") #기상청에서 가져오기
@@ -14,6 +16,7 @@ def find_weather():
 
     data = raw_data.split('<br />')
 
-    return(data[0]+data[1])
+    return(data[0]+dat[1])
 
 print(find_weather())
+recordMic("input.raw")
